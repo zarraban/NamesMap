@@ -5,7 +5,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class DataHandler {
 
-    Map<Integer,String> map = new DataRepository().getData();
+    Map<Integer, String> map = new DataRepository().getData();
 
     // Метод формує виведення нумерованого переліку імен
     public String getAll() {
@@ -13,8 +13,8 @@ public class DataHandler {
         AtomicInteger count = new AtomicInteger(0);
         map.forEach((id, name) ->
                 sb.append(String.format("%d) %d, %s%n",
-                        count.incrementAndGet(),id, name)
-        ));
+                        count.incrementAndGet(), id, name)
+                ));
         return "\n ALL NAMES: \n" + sb;
     }
 
